@@ -1,0 +1,129 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f5f9;
+    color: #263238;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #07253c;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px #0000000d;
+    text-align: center;
+    border: 1px solid black;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #183b56;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    padding: 20px;
+    background-color: #edf3f7;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#receitas {
+    color: #218838;
+}
+
+#despesas {
+    color: #c0392b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+    border: 1px solid #ccd3da;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    background-color: #07253c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: lime;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #667085;
+    background-color: #07253c;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 18px;
+    }
+}

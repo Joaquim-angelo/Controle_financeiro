@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Controle Financeiro</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Controle Financeiro</h1>
+        <p>Site para organização de ganhos, despesas e reservas.</p>
+    </header>
+
+    <main>
+        <section id="resumo">
+            <h2>Resumo financeiro</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Saldo atual</h3>
+                    <p id="saldo">R$ 0,00</p>
+                </article>
+
+                <article class="card">
+                    <h3>Ganhos</h3>
+                    <p id="ganhos">R$ 0,00</p>
+                </article>
+
+                <article class="card">
+                    <h3>Despesas</h3>
+                    <p id="despesas">R$ 0,00</p>
+                </article>
+
+                <article class="card">
+                    <h3>Reservado</h3>
+                    <p id="reservado">R$ 0,00</p>
+                </article>
+
+                <article class="card">
+                    <h3>Disponível</h3>
+                    <p id="disponivel">R$ 0,00</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="novo-lancamento">
+
+            <h2>Novo lançamento</h2>
+
+            <form id="formulario">
+
+                <label for="descricao">Descrição</label>
+
+                <input
+                    type="text"
+                    id="descricao"
+                    placeholder="Ex.: Salário"
+                >
+
+                <label for="valor">Valor (R$)</label>
+
+                <input
+                    type="number"
+                    id="valor"
+                    min="0.01"
+                    step="0.01"
+                    placeholder="Ex.: 3000.00"
+                    required
+                >
+
+                <label for="tipo">Tipo</label>
+                <select id="tipo" required>
+                    <option value="ganho">
+                        Ganho
+                    </option>
+                    <option value="despesa">
+                        Despesa
+                    </option>
+                </select>
+
+
+                <label for="categoria">Categoria</label>
+                <select id="categoria" required>
+                    <option value="Salário">
+                        Salário
+                    </option>
+
+                    <option value="Freelance">
+                        Freelance
+                    </option>
+
+                    <option value="Vendas">
+                        Vendas
+                    </option>
+
+                    <option value="Alimentação">
+                        Alimentação
+                    </option>
+
+                    <option value="Moradia">
+                        Moradia
+                    </option>
+
+                    <option value="Transporte">
+                        Transporte
+                    </option>
+
+                    <option value="Lazer">
+                        Lazer
+                    </option>
+
+                    <option value="Contas">
+                        Contas
+                    </option>
+
+                    <option value="Outros">
+                        Outros
+                    </option>
+                </select>
+
+
+                <label for="data">Data</label>
+
+                <input
+                    type="date"
+                    id="data"
+                >
+
+                <button type="submit">
+                    Adicionar lançamento
+                </button>
+            </form>
+        </section>
+
+        <section id="reservas">
+            <h2>Reservas de dinheiro</h2>
+            <form id="formulario-reserva">
+
+                <label for="nome-reserva">
+                    Nome da reserva
+                </label>
+
+                <input
+                    type="text"
+                    id="nome-reserva"
+                    placeholder="Ex.: Conta de energia"
+                    required
+                >
+
+                <label for="meta-reserva">
+                    Valor da meta (R$)
+                </label>
+                <input
+                    type="number"
+                    id="meta-reserva"
+                    min="0.01"
+                    step="0.01"
+                    placeholder="Ex.: 300.00"
+                    required
+                >
+                <button type="submit">
+                    Criar reserva
+                </button>
+            </form>
+
+            <div id="lista-reservas">
+                <p>
+                    Nenhuma reserva cadastrada.
+                </p>
+            </div>
+        </section>
+
+        <section id="historico">
+
+            <h2>Histórico de lançamentos</h2>
+
+            <div id="lista-lancamentos">
+
+                <p>
+                    Nenhum lançamento cadastrado.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>@Joaquim__angelo</p>
+    </footer>
+
+</body>
+</html>
